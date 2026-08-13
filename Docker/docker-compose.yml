@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    container_name: devops-task3
+    ports:
+      - "8081:80"
+    restart: unless-stopped
