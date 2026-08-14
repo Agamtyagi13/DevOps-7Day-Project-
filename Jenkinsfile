@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'feature/devops',
-                    url: 'https://github.com/Agamtyagi13/DevOps-7Day-Project-.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t devops-task3:v1 -f Docker/Dockerfile .'
